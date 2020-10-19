@@ -1,4 +1,11 @@
-# nlw-3-nodejs
-Node.js code from the Next Level Week #3 by Rocketseat
+# Next Level Week #3 (Rocketseat)
 
-`yarn init -y`
+🛠️ [Docs] Work In Progress 🛠️
+
+## 📝 License
+
+This project is under [MIT license](/LICENSE).
+
+---
+
+Made with :sparkling_heart: by [Miguel Oliveira](https://github.com/miguelsoliv) :wave:

@@ -1,3 +1,4 @@
+import { CelebrateError } from 'celebrate';
 import { ErrorRequestHandler } from 'express';
 import { ValidationError } from 'yup';
 
@@ -6,6 +7,16 @@ interface IValidationErrors {
 }
 
 const errorHandler: ErrorRequestHandler = (error, request, response, _) => {
+  if (error instanceof CelebrateError) {
+    const errors: string[] = [];
+
+    error.details.forEach(err => {
+      err.details.forEach(e => errors.push(e.message));
+    });
+
+    return response.status(400).json({ message: 'Validation fails', errors });
+  }
+
   if (error instanceof ValidationError) {
     const errors: IValidationErrors = {};
 

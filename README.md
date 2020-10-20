@@ -6,6 +6,7 @@ The API created by Rocketseat is able to create, list and show orphanages with t
 
 * Using eslint + prettier
 * Created `.gitignore`
+* Using `.gitkeep` in `uploads` folder
 * Interfaces for views
 * Parsing data in POST route for orphanage creation (all data provided by `multipart/form-data` is a `string` or `string[]`)
 * PUT route to update orphanage data
